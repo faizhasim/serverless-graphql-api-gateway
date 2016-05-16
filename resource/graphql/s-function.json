@@ -9,7 +9,24 @@
   "memorySize": 1024,
   "authorizer": {},
   "custom": {
-    "excludePatterns": []
+    "cors": {
+      "allowOrigin": "*",
+      "allowHeaders": ["Content-Type", "X-Amz-Date", "Authorization", "X-Api-Key"]
+    },
+    "excludePatterns": [
+      "node_modules"
+    ],
+    "optimize": {
+      "exclude": ["aws-sdk"],
+      "transforms": [{
+        "name": "babelify",
+        "opts": {
+          "presets": ["es2015"],
+          "plugins": ["syntax-async-functions", "transform-regenerator"]
+        }
+      }],
+      "minify": false
+    }
   },
   "endpoints": [
     {

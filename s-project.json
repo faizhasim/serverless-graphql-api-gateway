@@ -4,16 +4,6 @@
     "cors": {
       "allowOrigin": "*",
       "allowHeaders": ["Content-Type", "X-Amz-Date", "Authorization", "X-Api-Key"]
-    },
-    "optimize": {
-      "transforms": [{
-        "name": "babelify",
-        "opts": {
-          "presets": [
-            "es2015"
-          ]
-        }
-      }]
     }
   },
   "plugins": [
