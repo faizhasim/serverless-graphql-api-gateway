@@ -1,11 +1,6 @@
-# SC5 Serverless Boilerplate
+# Project Hamburger
 
-sc5-serverless-boilerplate is a project template for new serverless projects. Contents of the template:
-* plugin serverless-cors-plugin: allows centralized adding of CORS headers
-* plugin serverless-optimizer-plugin: optimize size of lambda function size in deployment
-* plugin [serverless-mocha-plugin](https://github.com/SC5/serverless-mocha-plugin): enable test driven development using mocha
-* file s-project.json: Register plugins above
-* file s-template.json: RequestTemplates restGet, restPost, restPut, restDelete for use in endpoints in s-function files
+> GraphQL API backed by AWS Lambda, served via AWS API Gateway. Munch, Munch, Munch...
 
 ## Creating new project
 
@@ -55,16 +50,6 @@ required for CORS preflight) are created properly
 
 (see https://github.com/joostfarla/serverless-cors-plugin)
 
-## Optimizing Lambda function size
-
-To enabled optimization of Lambda function size, add the following to the "custom" section of
-either _s-components_ or _s-function_ files.
-
-```
-"optimize": true
-```
-(see https://github.com/serverless/serverless-optimizer-plugin)
-
 ## Determining project name / stage during runtime
 
 Some resources (e.g. database tables, SNS topics, etc...) may be specific to the project and stage.
@@ -78,23 +63,3 @@ The project name and stage name can be determined during runtime using
 
 Function test are created automatically when creating new functions into the test/ directory.
 See [serverless-mocha-plugin](https://github.com/SC5/serverless-mocha-plugin) for more info
-
-
-## TODO
-
-Please see project GitHub [issue tracker](https://github.com/SC5/sc5-serverless-boilerplate/issues).
-
-## Release History
-
-* 2016/04/09 - v0.5.2 - Add serverless-mocha-plugin for test driven development
-* 2016/04/07 - v0.5.0 - Adds Serverless 0.5 compatibility
-* 2016/03/09 - v0.0.6 - Documentation updates
-* 2016/03/02 - v0.0.2 - Initial commit (partially working stub)
-
-## License
-
-Copyright (c) 2016 [SC5](http://sc5.io/), licensed for users and contributors under MIT license.
-https://github.com/sc5/sc5-serverless-boilerplate/blob/master/LICENSE-MIT
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/SC5/sc5-serverless-boilerplate/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
